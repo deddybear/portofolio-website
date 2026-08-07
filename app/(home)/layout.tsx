@@ -1,19 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "../globals/styles/globals.css";
 import NavbarComponent from "./components/navbar";
-import FootbarComponent from "./components/footbar";
+import FooterComponent from "./components/footer";
 import HeroSection from "./components/hero";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const PlusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta-sans",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,23 +19,35 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${PlusJakartaSans.variable} h-full antialiased`}
     >
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Portfolio Website</title>
       </head>
-      {/** perlu buat component navbar */}
-      <body className="min-h-full flex flex-col">
-        <NavbarComponent />
-        <HeroSection />
+      <body className="min-h-full">
+
+        {/* Header Section Start */}
+        <header className="w-full">
+          {/* Navbar Section */}
+          <NavbarComponent />
+        </header>
+        {/* Header Section End */}
+
+        {/* Hero Section Start */}
+        <section id="home" className="mt-10">
+          <HeroSection />
+        </section>
+        {/* Hero Section End */}
+
         {children}
 
-
-        <FootbarComponent />
+        {/* Footer Section Start */}
+        <footer>
+          <FooterComponent />
+        </footer>
+        {/* Footer Section End */}
       </body>
-      {/** perlu buat component footbar */}
     </html>
   );
 }
