@@ -38,7 +38,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body>
+      <body id="home">
 
         {/* Header Section Start */}
         <header>
@@ -48,7 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {/* Header Section End */}
 
         {/* Hero Section Start */}
-        <section id="home" className="mt-10">
+        <section className="py-10 bg-linear-to-r from-[#2BC0E4] to-[#EAECC6]">
           <HeroSection />
         </section>
         {/* Hero Section End */}

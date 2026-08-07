@@ -6,7 +6,7 @@ export default function NavbarComponent() {
         <nav className="relative after:pointer-events-none after:absolute">
             <div className="relative flex items-center justify-between px-1 lg:px-0">
                 {/* Mobile Menu Button Start */}
-                <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
+                <div className="absolute inset-y-0 right-2 flex items-center sm:hidden">
                     <button type="button" className="relative inline-flex items-center justify-center">
                         <span className="absolute inset-0.5"></span>
                         <span className="sr-only">Main Menu</span>
@@ -21,7 +21,7 @@ export default function NavbarComponent() {
                 {/* Mobile Menu Button End */}
 
                 {/* Logo Webiste Start */}
-                <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
+                <div className="flex flex-1 items-center sm:items-stretch sm:justify-start px-2">
                     <a href="#" className="block py-6 font-bold">Ini Logo</a>
                 </div>
                 {/* Logo Webiste End */}
