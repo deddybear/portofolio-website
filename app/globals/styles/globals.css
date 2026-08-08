@@ -1,7 +1,27 @@
 @import "tailwindcss";
 
+.bg-dots {
+    background-image: radial-gradient(circle at 1px 1px, rgb(20 28 58 / 0.06) 1px, transparent 0);
+    background-size: 22px 22px;
+}
+
+
+
+
 @theme {
- --font-sans: var(--font-plus-jakarta-sans);
+    --font-sans: var(--font-plus-jakarta-sans);
+    --color-ink: #101323;
+    --color-paper: #F3F1EC;
+    --color-navy: #141C3A;
+    --color-indigo: #3B4CCA;
+    --color-indigo-soft: #E4E7FB;
+    --color-line: #DEDBD2;
+    --color-muted: #6B6E7D;
+
+    --font-display: "Space Grotesk", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+
 }
 
 /* :root {
