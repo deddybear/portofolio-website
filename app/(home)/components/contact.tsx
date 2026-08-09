@@ -38,7 +38,7 @@ export default function ContactComponent({ email, location, numberWhatsapp, numb
                     </span>
                     <div className="flex flex-col leading-tight">
                         <span className="font-mono text-[11px] text-muted">Email</span>
-                        <span className="font-sans font-semibold text-sm break-all">{email}</span>
+                        <span className="font-sans font-semibold text-sm break-all lg:break-keep">{email}</span>
                     </div>
                 </a>
 

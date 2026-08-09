@@ -1,7 +1,7 @@
 export default async function ProjectsPostPage() {
     return (
         <div>
-            <h1> isinya detail project protofolio </h1>
+            <h1> Coming Soon </h1>
         </div>
     )
 }

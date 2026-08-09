@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "../globals/styles/globals.css";
 
 
@@ -21,6 +21,11 @@ const PlusJakartaSansFont = Plus_Jakarta_Sans({
     style: ["normal", "italic"],
 })
 
+const JetBrainsMonoFont = JetBrains_Mono({
+    variable: "--font-jet-brains-mono",
+    weight: ["200", "300", "400", "500", "600", "700", "800"],
+})
+
 
 export const metadata: Metadata = {
     title: "Portfolio Website",
@@ -31,7 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     return (
         <html
             lang="en"
-            className={`${PlusJakartaSansFont.variable} h-full antialiased scroll-smooth`}
+            className={`${PlusJakartaSansFont.variable} ${JetBrainsMonoFont.variable} h-full antialiased scroll-smooth`}
         >
             <head>
                 <meta charSet="UTF-8" />
@@ -40,6 +45,34 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <body id="home">
                 {children}
             </body>
+
+            {/* Floating Action Button */}
+            <div className="group fixed bottom-6 right-6 z-50 flex items-center">
+
+                {/* Label muncul saat hover (desktop) */}
+                <span className="absolute right-full mr-3 whitespace-nowrap
+                 bg-navy text-white text-xs font-mono px-3 py-2 rounded-lg
+                 opacity-0 translate-x-2 pointer-events-none
+                 transition-all duration-300
+                 group-hover:opacity-100 group-hover:translate-x-0">
+                    Chat via WhatsApp
+                </span>
+
+                <a href="#home"
+                    className="relative w-14 h-14 rounded-full bg-accent-gradient text-white
+              shadow-lg shadow-indigo/30 flex items-center justify-center
+              transition-transform duration-300 hover:scale-110">
+
+                    {/* Ring ping di belakang */}
+                    <span className="fab-ping absolute inset-0 rounded-full bg-accent-gradient"></span>
+
+                    <svg className="relative w-6 h-6" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 21L4.5 16.5C3.55 14.9 3 13.05 3 11C3 5.5 7.5 1 13 1S23 5.5 23 11S18.5 21 13 21C11.05 21 9.15 20.5 7.5 19.5L3 21Z"
+                            stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+
         </html>
     );
 }

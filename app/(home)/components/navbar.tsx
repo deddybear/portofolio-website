@@ -22,7 +22,13 @@ export default function NavbarComponent() {
 
                 {/* Logo Webiste Start */}
                 <div className="flex flex-1 items-center sm:items-stretch sm:justify-start px-2">
-                    <a href="#" className="block py-6 font-bold">Ini Logo</a>
+                    <a href="#" className="block py-6 font-bold">
+                        <span className="relative shrink-0 w-10 h-10 rounded-xl bg-accent-gradient flex items-center justify-center overflow-hidden">
+                            <svg width="24" height="24" viewBox="0 0 64 64">
+                                <text x="14" y="41" fontFamily="'JetBrains Mono', monospace" fontWeight="700" fontSize="25" fill="#FFFFFF">ds<tspan fill="#141C3A">.</tspan></text>
+                            </svg>
+                        </span>
+                    </a>
                 </div>
                 {/* Logo Webiste End */}
 
