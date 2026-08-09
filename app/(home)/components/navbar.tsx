@@ -31,8 +31,9 @@ export default function NavbarComponent() {
                     <div className="flex space-x-4">
                         <a href="#home" className="px-3 py-2 text-sm font-medium">Home</a>
                         <a href="#about" className="px-3 py-2 text-sm font-medium">About</a>
-                        <a href="#projects" className="px-3 py-2 text-sm font-medium">Portfolio</a>
-                        <a href="#Stack" className="px-3 py-2 text-sm font-medium">Stack</a>
+                        <a href="#portfolio" className="px-3 py-2 text-sm font-medium">Portfolio</a>
+                        <a href="#stack" className="px-3 py-2 text-sm font-medium">Stack</a>
+                        <a href="#contact" className="px-3 py-2 text-sm font-medium">Contact</a>
                     </div>
                 </div>
                 {/* Item Navbar End */}

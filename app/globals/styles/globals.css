@@ -13,8 +13,8 @@
     --color-ink: #101323;
     --color-paper: #F3F1EC;
     --color-navy: #141C3A;
-    --color-indigo: #3B4CCA;
-    --color-indigo-soft: #E4E7FB;
+    --color-indigo: #5B86E5;
+    --color-indigo-soft: #E4F0FC;
     --color-line: #DEDBD2;
     --color-muted: #6B6E7D;
 
@@ -23,6 +23,15 @@
     --font-mono: "JetBrains Mono", monospace;
 
 }
+
+@utility bg-stripe-overlay {
+    background-image: repeating-linear-gradient(115deg, rgb(255 255 255 / 0.4) 0 2px, transparent 2px 26px);
+}
+
+@utility bg-accent-gradient {
+    background-image: linear-gradient(to bottom right, #00B4DB, #5B86E5);
+}
+
 
 /* :root {
   --background: #ffffff;

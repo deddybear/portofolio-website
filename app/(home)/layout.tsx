@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "../globals/styles/globals.css";
-import NavbarComponent from "./components/navbar";
-import FooterComponent from "./components/footer";
-import HeroSection from "./components/hero";
-import PortofolioSection from "./components/portofolio";
+
+
 
 
 /** 
@@ -33,38 +31,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     return (
         <html
             lang="en"
-            className={`${PlusJakartaSansFont.variable} h-full antialiased`}
+            className={`${PlusJakartaSansFont.variable} h-full antialiased scroll-smooth`}
         >
             <head>
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </head>
             <body id="home">
-
-                {/* Header Section Start */}
-                <header id="navbar" className="bg-white">
-                    {/* Navbar Section */}
-                    <NavbarComponent />
-                </header>
-                {/* Header Section End */}
-
-                {/* Hero Section Start */}
-                <section id="hero" className="px-15 py-10 bg-gray-100 lg:py-25">
-                    <HeroSection />
-                </section>
-                {/* Hero Section End */}
-
-                <section id="portofolio" className="px-15 py-25">
-                    <PortofolioSection />
-                </section>
-
                 {children}
-
-                {/* Footer Section Start */}
-                <footer>
-                    <FooterComponent />
-                </footer>
-                {/* Footer Section End */}
             </body>
         </html>
     );

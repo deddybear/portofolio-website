@@ -1,21 +1,4 @@
-import dayjs from "dayjs";
-import IsLeapYear from "dayjs/plugin/isLeapYear";
-import 'dayjs/locale/id';
-
-export default function HeroSection() {
-
-    dayjs.extend(IsLeapYear)
-    dayjs.locale('id')
-
-    const gapYearExperience = () => {
-        const yearEnd: number = Number(dayjs().format("YYYY"))
-        const yearStart: number = 2020
-        return yearEnd - yearStart;
-    }
-
-    const projectFinish = () => {
-        return 10;
-    }
+export default function HeroComponent() {
 
     return (
         <div>
@@ -53,33 +36,10 @@ export default function HeroSection() {
             <div className="mt-15 lg:mt-25">
                 <div className="px-2 text-center lg:text-left">
                     <div className="container">
-                        <a target="_blank" href="#" className="shadow-md bg-linear-to-r from-[#00B4DB] to-[#5B86E5] text-white font-bold py-3 px-4 rounded">Download Resume </a>
+                        <a target="_blank" href="#" className="shadow-md bg-linear-to-r from-[#00B4DB] to-indigo text-white font-bold py-3 px-4 rounded">Download Resume </a>
                     </div>
                 </div>
             </div>
-            {/* Button Download Resume End */}
-
-            {/* Box Experience Start */}
-
-            {/* <div className="ml-2.5 mt-15">
-                <div className="flex flex-row gap-5">
-                    <div className=" bg-[#86a6e9] px-5 py-2.5 text-center">
-                        <p className="text-white text-3xl font-semibold lg:text-5xl mb-3">{gapYearExperience()}</p>
-                        <p className="text-white font-semibold">Year Experience</p>
-                    </div>
-                    <div className="bg-linear-to-r from-[#00B4DB] to-[#5B86E5] px-5 py-2 text-center">
-                        <p className="text-white text-3xl font-semibold lg:text-5xl mb-3">+{projectFinish()}</p>
-                        <p className="text-white font-semibold">Project Completed</p>
-                    </div>
-                    <div className="bg-linear-to-r from-[#00B4DB] to-[#5B86E5] px-5 py-2.5 text-center">
-                        <p className="text-white text-3xl font-semibold lg:text-5xl mb-3">{gapYearExperience()}</p>
-                        <p className="text-white font-semibold">Year</p>
-                        <p className="text-white">Experience</p>
-                    </div>
-                </div>
-            </div> */}
-
-            {/* Box Experience End */}
 
         </div>
     )
