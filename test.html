@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Button — Tailwind v4</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+    --color-ink: #101323;
+    --color-paper: #F3F1EC;
+    --color-navy: #141C3A;
+    --color-indigo: #5B86E5;
+    --color-line: #DEDBD2;
+    --color-muted: #6B6E7D;
+
+    --font-display: "Space Grotesk", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+  }
+
+  @utility bg-dots {
+    background-image: radial-gradient(circle at 1px 1px, rgb(20 28 58 / 0.06) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
+  @utility bg-accent-gradient {
+    background-image: linear-gradient(to bottom right, #00B4DB, #5B86E5);
+  }
+
+  /* Ping halus di belakang tombol, biar terasa "hidup" tanpa ganggu */
+  @keyframes fab-ping {
+    0%   { transform: scale(1);   opacity: 0.5; }
+    75%, 100% { transform: scale(1.6); opacity: 0; }
+  }
+  .fab-ping {
+    animation: fab-ping 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+</style>
+</head>
+
+<body class="bg-paper bg-dots text-ink font-body min-h-screen">
+
+  <!-- Konten dummy biar konteks scroll keliatan -->
+  <div class="max-w-3xl mx-auto px-6 py-20">
+    <span class="font-mono text-xs uppercase tracking-[0.12em] text-indigo">Preview</span>
+    <h1 class="font-display font-semibold text-3xl tracking-tight mt-2 mb-4">Floating Button Demo</h1>
+    <p class="text-muted text-sm leading-relaxed max-w-md">
+      Scroll ke bawah, tombolnya akan tetap nempel di pojok kanan bawah
+      karena pakai <code class="font-mono bg-white border border-line rounded px-1.5 py-0.5">fixed</code>,
+      bukan <code class="font-mono bg-white border border-line rounded px-1.5 py-0.5">absolute</code>.
+    </p>
+    <div class="h-[140vh]"></div>
+  </div>
+
+  <!-- Floating Action Button: Back to Top -->
+  <div id="backToTop" class="group fixed bottom-6 right-6 z-50 flex items-center
+                              opacity-0 translate-y-3 pointer-events-none
+                              transition-all duration-300">
+
+    <!-- Label muncul saat hover (desktop) -->
+    <span class="absolute right-full mr-3 whitespace-nowrap
+                 bg-navy text-white text-xs font-mono px-3 py-2 rounded-lg
+                 opacity-0 translate-x-2 pointer-events-none
+                 transition-all duration-300
+                 group-hover:opacity-100 group-hover:translate-x-0">
+      Kembali ke atas
+    </span>
+
+    <button type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="relative w-14 h-14 rounded-full bg-accent-gradient text-white
+              shadow-lg shadow-indigo/30 flex items-center justify-center
+              transition-transform duration-300 hover:scale-110">
+
+      <!-- Ring ping di belakang -->
+      <span class="fab-ping absolute inset-0 rounded-full bg-accent-gradient"></span>
+
+      <svg class="relative w-6 h-6" viewBox="0 0 24 24" fill="none">
+        <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+  </div>
+
+  <script>
+    const backToTopBtn = document.getElementById('backToTop');
+    const toggleVisibility = () => {
+      const shouldShow = window.scrollY > 400;
+      backToTopBtn.classList.toggle('opacity-0', !shouldShow);
+      backToTopBtn.classList.toggle('translate-y-3', !shouldShow);
+      backToTopBtn.classList.toggle('pointer-events-none', !shouldShow);
+    };
+    window.addEventListener('scroll', toggleVisibility);
+    toggleVisibility();
+  </script>
+
+</body>
+
+</html>

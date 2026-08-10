@@ -5,7 +5,7 @@ export default function AboutComponent({yearCount, completedProjectCount, techDo
     return (
         <div>
             {/* tittle section start */}
-            <h1 className="font-sans font-bold text-6xl tracking-wide sm:tracking-widest">
+            <h1 className="font-sans font-bold text-6xl tracking-wide text-center sm:tracking-widest sm:text-left">
                 About Me
             </h1>
             {/* tittle section end */}

@@ -37,7 +37,7 @@ export default function ContactComponent({ email, location, numberWhatsapp, numb
                         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M4 6H20V18H4V6Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" /><path d="M4 7L12 13L20 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
                     </span>
                     <div className="flex flex-col leading-tight">
-                        <span className="font-mono text-[11px] text-muted">Email</span>
+                        <span className="font-sans text-[11px] text-muted">Email</span>
                         <span className="font-sans font-semibold text-sm break-all lg:break-keep">{email}</span>
                     </div>
                 </a>
@@ -49,7 +49,7 @@ export default function ContactComponent({ email, location, numberWhatsapp, numb
                         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M3 21L4.5 16.5C3.55 14.9 3 13.05 3 11C3 5.5 7.5 1 13 1S23 5.5 23 11S18.5 21 13 21C11.05 21 9.15 20.5 7.5 19.5L3 21Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" transform="translate(-1,0) scale(0.9)" /></svg>
                     </span>
                     <div className="flex flex-col leading-tight">
-                        <span className="font-mono text-[11px] text-muted">WhatsApp</span>
+                        <span className="font-sans text-[11px] text-muted">WhatsApp</span>
                         <span className="font-sans font-semibold text-sm">{numberWaFormated}</span>
                     </div>
                 </a>
@@ -59,7 +59,7 @@ export default function ContactComponent({ email, location, numberWhatsapp, numb
                         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 20 15 20 9.5C20 5.36 16.64 2 12.5 2C8.36 2 5 5.36 5 9.5C5 15 12 21 12 21Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" /><circle cx="12.5" cy="9.5" r="2.5" stroke="currentColor" strokeWidth="2" /></svg>
                     </span>
                     <div className="flex flex-col leading-tight">
-                        <span className="font-mono text-[11px] text-muted">Lokasi</span>
+                        <span className="font-sans text-[11px] text-muted">Lokasi</span>
                         <span className="font-sans font-semibold text-sm">{location}</span>
                     </div>
                 </div>

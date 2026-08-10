@@ -227,7 +227,7 @@ export default function StackComponent() {
     return (
         <div>
             {/* tittle section start */}
-            <h1 className="font-sans font-bold text-6xl tracking-wide sm:tracking-widest">
+            <h1 className="font-sans font-bold text-6xl tracking-wide text-center sm:tracking-widest sm:text-left">
                 Technology Stack
             </h1>
             {/* tittle section end */}

@@ -10,6 +10,7 @@ import FooterComponent from "./components/footer";
 import dayjs from "dayjs";
 import IsLeapYear from "dayjs/plugin/isLeapYear";
 import 'dayjs/locale/id';
+import FloatingButton from "./components/floating-button";
 
 
 export default function Home() {
@@ -23,7 +24,7 @@ export default function Home() {
         return yearEnd - yearStart;
     }
 
-    const yearNow = () : number => {
+    const yearNow = (): number => {
         return Number(dayjs().format("YYYY"))
     }
 
@@ -49,6 +50,8 @@ export default function Home() {
 
 
 
+
+
     return (
         <div>
 
@@ -67,34 +70,42 @@ export default function Home() {
                 {/* Hero Section End */}
 
                 {/* About Section Start */}
-                <section id="about" className="px-15 py-10 lg:py-25">
+                <section id="about" className="px-15 py-15 lg:py-25">
                     <AboutComponent yearCount={gapYearExperience()} completedProjectCount={projectFinish()} techDomainCount={techDomain()} />
                 </section>
                 {/* About Section End */}
 
                 {/* Portofolio Section Start */}
-                <section id="portfolio" className="px-15 py-25">
+                <section id="portfolio" className="px-15 py-15 lg:py-25">
                     <PortfolioComponent />
                 </section>
                 {/* Portofolio Section Start */}
 
                 {/* Technology Section Start */}
-                <section id="stack" className="px-15 py-25">
+                <section id="stack" className="px-15 py-15 lg:py-25">
                     <StackComponent />
                 </section>
                 {/* Technology Section End */}
 
                 <section id="contact" className="px-15 mb-15">
-                    <ContactComponent email="dedi.suharman05@gmail.com" numberWhatsapp="6287859267656" numberWaFormated={formatPhoneID("6287859267656")} location="Sidoarjo, Indonesia" />
+                    <ContactComponent
+                        email="dedi.suharman05@gmail.com" numberWhatsapp="6287859267656"
+                        numberWaFormated={formatPhoneID("6287859267656")} location="Sidoarjo, Indonesia" />
                 </section>
             </main>
 
 
             {/* Footer Section Start */}
             <footer>
-                <FooterComponent email="dedi.suharman05@gmail.com" numberWhatsapp="6287859267656" numberWaFormated={formatPhoneID("6287859267656")} year={yearNow()} location="Sidoarjo, Indonesia" />
+                <FooterComponent
+                    email="dedi.suharman05@gmail.com" numberWhatsapp="6287859267656"
+                    numberWaFormated={formatPhoneID("6287859267656")} year={yearNow()} location="Sidoarjo, Indonesia" />
             </footer>
             {/* Footer Section End */}
+
+            {/* Floating Action Button */}
+            <FloatingButton />
         </div>
+
     );
 }
