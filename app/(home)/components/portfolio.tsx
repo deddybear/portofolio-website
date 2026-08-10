@@ -61,20 +61,20 @@ export default function PortfolioComponent() {
             <div id="collection-projects" className="mt-15 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:mt-18 lg:gap-8">
                 {
                     dataDummy.map((data, index) => (
-                        <a key={index} href="#" className="group flex flex-col bg-white border border-line rounded-2xl shadow-xl overflow-hidden
+                        <a key={index} href="#" className="group flex flex-col bg-white border border-line rounded-2xl shadow-lg overflow-hidden
                           transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_40px_-18px_rgb(20_28_58/0.35)]">
                             <div className="relative aspect-[1/0.82] bg-linear-to-br from-[#00B4DB] to-indigo overflow-hidden">
-                                <div className="absolute inset-0 opacity-40 bg-[repeating-linear-gradient(115deg,rgb(255_255_255/0.15)_0_2px,transparent_2px_26px)]"></div>
+                                <div className="absolute inset-0 opacity-40  bg-[repeating-linear-gradient(115deg,rgb(255_255_255/0.15)_0_2px,transparent_2px_26px)]"></div>
                                 <span className="absolute top-3.5 left-3.5 font-mono text-[11px] tracking-wide text-white bg-black/25 border border-white/35 rounded-full px-2.5 py-1 backdrop-blur-sm">
                                     {data.typeProject}
                                 </span>
-                                <span className="absolute bottom-3.5 right-4 font-display font-bold text-[13px] text-white/75">
+                                <span className="absolute bottom-3.5 right-4 font-mono font-bold text-[13px] text-white/75">
                                     {`0${index + 1}`}
                                 </span>
                             </div>
                             <div className="flex flex-col gap-3 p-5 flex-1">
                                 <div className="flex items-start justify-between gap-3">
-                                    <span className="font-display font-semibold text-lg leading-snug tracking-tight">
+                                    <span className="font-sans font-semibold text-lg leading-snug tracking-tight">
                                         {data.nameProject}
                                     </span>
                                     <span className="shrink-0 w-7.5 h-7.5 rounded-full border border-line flex items-center justify-center

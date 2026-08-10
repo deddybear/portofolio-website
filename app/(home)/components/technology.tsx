@@ -1,4 +1,4 @@
-export default function StackComponent() {
+export default function TechnologyComponent() {
     const dataTechBackend: DataTechnology[] = [
         {
             name: "Laravel",

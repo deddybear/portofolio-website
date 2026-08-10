@@ -21,13 +21,17 @@ export default function NavbarComponent() {
                 {/* Mobile Menu Button End */}
 
                 {/* Logo Webiste Start */}
-                <div className="flex flex-1 items-center sm:items-stretch sm:justify-start px-2">
-                    <a href="#" className="block py-6 font-bold">
-                        <span className="relative shrink-0 w-10 h-10 rounded-xl bg-accent-gradient flex items-center justify-center overflow-hidden">
+                <div className="sm:items-stretch sm:justify-start px-2">
+                    <a href="#" className="flex flex-row items-center gap-3 py-6 font-bold">
+                        <span className="relative flex shrink-0 w-10 h-10 rounded-xl bg-accent-gradient  items-center justify-center overflow-hidden">
                             <svg width="24" height="24" viewBox="0 0 64 64">
                                 <text x="14" y="41" fontFamily="'JetBrains Mono', monospace" fontWeight="700" fontSize="25" fill="#FFFFFF">ds<tspan fill="#141C3A">.</tspan></text>
                             </svg>
                         </span>
+                        <div className="hidden sm:flex flex-col leading-tight">
+                            <span className="font-sans font-bold text-sm">Dedi <span className="bg-linear-to-r bg-clip-text text-transparent from-[#00B4DB] to-[#5B86E5]">Suharman</span></span>
+                            <span className="font-mono text-[10px] text-muted tracking-wide">FULLSTACK DEVELOPER</span>
+                        </div>
                     </a>
                 </div>
                 {/* Logo Webiste End */}
@@ -35,11 +39,11 @@ export default function NavbarComponent() {
                 {/* Item Navbar Start */}
                 <div className="hidden sm:block">
                     <div className="flex space-x-4">
-                        <a href="#home" className="px-3 py-2 text-sm font-medium">Home</a>
-                        <a href="#about" className="px-3 py-2 text-sm font-medium">About</a>
-                        <a href="#portfolio" className="px-3 py-2 text-sm font-medium">Portfolio</a>
-                        <a href="#stack" className="px-3 py-2 text-sm font-medium">Stack</a>
-                        <a href="#contact" className="px-3 py-2 text-sm font-medium">Contact</a>
+                        <a href="#home" className="px-3 py-2 text-sm font-medium hover:bg-linear-to-r hover:bg-clip-text hover:text-transparent hover:from-[#00B4DB] hover:to-[#5B86E5]">Home</a>
+                        <a href="#about" className="px-3 py-2 text-sm font-medium hover:bg-linear-to-r hover:bg-clip-text hover:text-transparent hover:from-[#00B4DB] hover:to-[#5B86E5]">About</a>
+                        <a href="#portfolio" className="px-3 py-2 text-sm font-medium hover:bg-linear-to-r hover:bg-clip-text hover:text-transparent hover:from-[#00B4DB] hover:to-[#5B86E5]">Portfolio</a>
+                        <a href="#stack" className="px-3 py-2 text-sm font-medium hover:bg-linear-to-r hover:bg-clip-text hover:text-transparent hover:from-[#00B4DB] hover:to-[#5B86E5]">Technology</a>
+                        <a href="#contact" className="px-3 py-2 text-sm font-medium hover:bg-linear-to-r hover:bg-clip-text hover:text-transparent hover:from-[#00B4DB] hover:to-[#5B86E5]">Contact</a>
                     </div>
                 </div>
                 {/* Item Navbar End */}

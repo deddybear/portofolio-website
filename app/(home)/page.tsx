@@ -4,7 +4,7 @@ import NavbarComponent from "./components/navbar";
 import HeroComponent from "./components/hero";
 import AboutComponent from "./components/about";
 import PortfolioComponent from "./components/portfolio";
-import StackComponent from "./components/stack";
+import TechnologyComponent from "./components/technology";
 import ContactComponent from "./components/contact";
 import FooterComponent from "./components/footer";
 import dayjs from "dayjs";
@@ -83,7 +83,7 @@ export default function Home() {
 
                 {/* Technology Section Start */}
                 <section id="stack" className="px-15 py-15 lg:py-25">
-                    <StackComponent />
+                    <TechnologyComponent />
                 </section>
                 {/* Technology Section End */}
 

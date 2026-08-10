@@ -32,7 +32,7 @@ export default function FloatingButton() {
                  opacity-0 translate-x-2 pointer-events-none
                  transition-all duration-300
                  group-hover:opacity-100 group-hover:translate-x-0">
-                Chat via WhatsApp
+                Go Top Page
             </span>
 
             <a href="#home"

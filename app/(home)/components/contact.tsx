@@ -4,7 +4,7 @@ export default function ContactComponent({ email, location, numberWhatsapp, numb
     return (
         <div className="max-w-4xl mx-auto">
 
-            <div className="relative overflow-hidden bg-accent-gradient text-white rounded-3xl px-8 py-14 sm:px-14 sm:py-16 text-center">
+            <div className="relative overflow-hidden bg-accent-gradient text-white rounded-3xl px-8 py-14 sm:px-14 sm:py-16 text-center shadow-xl/30">
                 <div className="absolute inset-0 opacity-[0.1] bg-stripe-overlay"></div>
 
                 <div className="relative flex flex-col items-center">
@@ -32,7 +32,7 @@ export default function ContactComponent({ email, location, numberWhatsapp, numb
 
                 <a href={`mailto:${email}`}
                     className="group flex items-center gap-3.5 bg-white border border-line rounded-xl px-4 py-4
-                transition-all duration-300 hover:-translate-y-1 hover:border-indigo hover:shadow-[0_12px_28px_-16px_rgb(20_28_58/0.35)]">
+                transition-all duration-300 hover:-translate-y-1 hover:border-indigo hover:shadow-[0_12px_28px_-16px_rgb(20_28_58/0.35)] shadow-xl">
                     <span className="shrink-0 w-9 h-9 rounded-lg bg-indigo-soft text-indigo flex items-center justify-center">
                         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M4 6H20V18H4V6Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" /><path d="M4 7L12 13L20 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
                     </span>
@@ -44,7 +44,7 @@ export default function ContactComponent({ email, location, numberWhatsapp, numb
 
                 <a href={`https://wa.me/${numberWhatsapp}`} target="_blank"
                     className="group flex items-center gap-3.5 bg-white border border-line rounded-xl px-4 py-4
-                transition-all duration-300 hover:-translate-y-1 hover:border-indigo hover:shadow-[0_12px_28px_-16px_rgb(20_28_58/0.35)]">
+                transition-all duration-300 hover:-translate-y-1 hover:border-indigo hover:shadow-[0_12px_28px_-16px_rgb(20_28_58/0.35)] shadow-xl">
                     <span className="shrink-0 w-9 h-9 rounded-lg bg-indigo-soft text-indigo flex items-center justify-center">
                         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M3 21L4.5 16.5C3.55 14.9 3 13.05 3 11C3 5.5 7.5 1 13 1S23 5.5 23 11S18.5 21 13 21C11.05 21 9.15 20.5 7.5 19.5L3 21Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" transform="translate(-1,0) scale(0.9)" /></svg>
                     </span>
@@ -54,7 +54,7 @@ export default function ContactComponent({ email, location, numberWhatsapp, numb
                     </div>
                 </a>
 
-                <div className="flex items-center gap-3.5 bg-white border border-line rounded-xl px-4 py-4">
+                <div className="flex items-center gap-3.5 bg-white border border-line rounded-xl px-4 py-4 shadow-xl">
                     <span className="shrink-0 w-9 h-9 rounded-lg bg-indigo-soft text-indigo flex items-center justify-center">
                         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 20 15 20 9.5C20 5.36 16.64 2 12.5 2C8.36 2 5 5.36 5 9.5C5 15 12 21 12 21Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" /><circle cx="12.5" cy="9.5" r="2.5" stroke="currentColor" strokeWidth="2" /></svg>
                     </span>
