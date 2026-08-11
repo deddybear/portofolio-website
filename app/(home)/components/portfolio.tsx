@@ -45,7 +45,7 @@ export default function PortfolioComponent() {
     return (
         <div>
             {/* tittle section start */}
-            <h1 className="font-sans text-center font-bold text-6xl tracking-wide sm:tracking-widest">Portfolio</h1>
+            <h1 className="font-sans text-center font-bold text-5xl tracking-wide sm:tracking-widest lg:text-6xl">Portfolio</h1>
             {/* tittle section end */}
 
             {/* description section start */}
@@ -58,7 +58,7 @@ export default function PortfolioComponent() {
 
             {/* list card projects start */}
 
-            <div id="collection-projects" className="mt-15 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:mt-18 lg:gap-8">
+            <div id="collection-projects" className="mt-15 grid grid-cols-1 gap-4 sm:grid-cols-3 lg:mt-18 lg:gap-8">
                 {
                     dataDummy.map((data, index) => (
                         <a key={index} href="#" className="group flex flex-col bg-white border border-line rounded-2xl shadow-lg overflow-hidden

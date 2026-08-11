@@ -82,7 +82,7 @@ export default function Home() {
                 {/* Portofolio Section Start */}
 
                 {/* Technology Section Start */}
-                <section id="stack" className="px-15 py-15 lg:py-25">
+                <section id="technology" className="px-15 py-15 lg:py-25">
                     <TechnologyComponent />
                 </section>
                 {/* Technology Section End */}

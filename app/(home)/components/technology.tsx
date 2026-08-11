@@ -227,7 +227,7 @@ export default function TechnologyComponent() {
     return (
         <div>
             {/* tittle section start */}
-            <h1 className="font-sans font-bold text-6xl tracking-wide text-center sm:tracking-widest sm:text-left">
+            <h1 className="font-sans font-bold text-5xl tracking-wide text-center sm:tracking-widest sm:text-left lg:text-6xl">
                 Technology Stack
             </h1>
             {/* tittle section end */}
@@ -253,7 +253,7 @@ export default function TechnologyComponent() {
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                             {
                                 data.technology.map((data, indexNested) => (
                                     <div key={indexNested} className="group flex items-center gap-3 bg-white border border-line rounded-xl px-4 py-3.5
