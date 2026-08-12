@@ -1,3 +1,7 @@
+'use client';
+
+import { useState } from "react"
+
 export default function TechnologyComponent() {
     const dataTechBackend: DataTechnology[] = [
         {
@@ -219,12 +223,23 @@ export default function TechnologyComponent() {
             technology: dataTechDatabase,
         },
         {
-            name: "Infrastructure & DevOps",
+            name: "Infra & DevOps",
             technology: dataTechDevOps
         }
     ]
 
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+    const handleOpenAccordion = (index: number) => {
+        setOpenIndex((prev) => (prev === index ? null : index));
+    };
+
+
+
     return (
+
+
+
         <div>
             {/* tittle section start */}
             <h1 className="font-sans font-bold text-5xl tracking-wide text-center sm:tracking-widest sm:text-left lg:text-6xl">
@@ -241,36 +256,81 @@ export default function TechnologyComponent() {
             {/* deskripsi section end */}
 
             {
-                listDataTech.map((data, index) => (
-                    <div key={index} className="mt-10 space-y-10">
-                        <div>
-                            <div className="flex items-center gap-3 mb-4">
+                listDataTech.map((data, index) => {
+
+                    const isOpen = openIndex === index;
+
+                    return (
+                        <div key={index} className="mt-10 space-y-10">
+                            {/* ini diganti button */}
+
+                            {/* <div className="flex items-center gap-3 mb-4">
                                 <span className="font-mono text-xs tracking-wide text-navy bg-indigo-soft px-2.5 py-1 rounded-full">
                                     {`0${index + 1}`}
                                 </span>
                                 <h3 className="font-display font-semibold text-base tracking-wide">{data.name}</h3>
                                 <span className="flex-1 border-t border-dashed border-line"></span>
+                            </div> */}
+
+                            <button
+                                type="button"
+                                onClick={() => handleOpenAccordion(index)}
+                                aria-expanded={isOpen}
+                                className="flex items-center gap-3 mb-4"
+                            >
+                                <span className="font-mono text-xs tracking-wide text-navy bg-indigo-soft px-2.5 py-1 rounded-full">
+                                    {String(index + 1).padStart(2, '0')}
+                                </span>
+                                <span className="font-display font-semibold text-base">
+                                    {data.name}
+                                </span>
+                                <span className="flex-1 border-t border-dashed border-line"></span>
+                                <span className="font-mono text-[11px] text-muted mr-1">
+                                    {data.technology.length} tools
+                                </span>
+                                <svg
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 20 20"
+                                    className="flex transition-transform duration-300"
+                                    style={{ transform: isOpen ? 'rotate(180deg)' : 'none' }}
+                                >
+                                    <path
+                                        d="M5 7.5L10 12.5L15 7.5"
+                                        stroke="#141C3A"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        fill="none"
+                                    />
+                                </svg>
+                            </button>
+
+                            <div className="grid transition-[grid-template-rows] duration-300 ease-out" style={{ gridTemplateRows: isOpen ? '1fr' : '0fr'}}>
+                                <div className="overflow-hidden">
+                                    <div className="grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                                        {
+                                            data.technology.map((data, indexNested) => (
+                                                <div key={indexNested} 
+                                                className="group flex items-center gap-3 bg-white border border-line rounded-xl px-4 py-3.5 mb-2
+                                                           transition-all duration-300 hover:-translate-y-1 hover:border-indigo hover:shadow-[0_12px_28px_-16px_rgb(20_28_58/0.35)]"
+                                                >
+                                                    <span className="shrink-0 w-9 h-9 rounded-lg  flex items-center justify-center font-display font-bold text-xs">
+                                                        {data.icon}
+                                                    </span>
+                                                    <div className="flex flex-col leading-tight">
+                                                        <span className="font-display font-semibold text-sm">{data.name}</span>
+                                                        <span className="font-mono text-[11px] text-muted">{data.description}</span>
+                                                    </div>
+                                                </div>
+                                            ))
+                                        }
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-                            {
-                                data.technology.map((data, indexNested) => (
-                                    <div key={indexNested} className="group flex items-center gap-3 bg-white border border-line rounded-xl px-4 py-3.5
-                      transition-all duration-300 hover:-translate-y-1 hover:border-indigo hover:shadow-[0_12px_28px_-16px_rgb(20_28_58/0.35)]">
-                                        <span className="shrink-0 w-9 h-9 rounded-lg  flex items-center justify-center font-display font-bold text-xs">
-                                            {data.icon}
-                                        </span>
-                                        <div className="flex flex-col leading-tight">
-                                            <span className="font-display font-semibold text-sm">{data.name}</span>
-                                            <span className="font-mono text-[11px] text-muted">{data.description}</span>
-                                        </div>
-                                    </div>
-                                ))
-                            }
-                        </div>
-                    </div>
-                ))
+                    )
+                })
             }
         </div>
     )
