@@ -6,17 +6,17 @@ export default function HeroComponent() {
             <div className="mb-10">
                 <div className="lg:flex">
                     <div className="w-full self-center px-2 text-center lg:text-justify">
-                        <h1 className="font-bold text-3xl tracking-wide mb-2 lg:mb-3 lg:text-6xl sm:tracking-widest">Hello, I&apos;am Dedi,</h1>
-                        <h1 className="font-semibold text-2xl tracking-wide mb-8 lg:mb-17 lg:text-5xl sm:tracking-wider">Fullstack Developer</h1>
+                        <h1 className="font-sans font-bold text-3xl tracking-wide mb-2 lg:mb-3 lg:text-6xl sm:tracking-widest">Hello, I&apos;am Dedi,</h1>
+                        <h1 className="font-sans font-semibold text-2xl tracking-wide mb-8 lg:mb-17 lg:text-5xl sm:tracking-wider">Fullstack Developer</h1>
                         {/* for mobile start */}
-                        <p className="block font-normal text-base text-gray-600 tracking-wide mb-2 lg:max-w-2xl lg:mb-3 lg:text-1xl sm:hidden">
+                        <p className="font-sans block font-normal text-base text-gray-600 tracking-wide mb-2 lg:max-w-2xl lg:mb-3 lg:text-1xl sm:hidden">
                             1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur eligendi totam unde voluptatem,
                             officia quas? Eveniet tenetur libero officiis, corrupti neque ex nostrum id, voluptates, dolorum sunt odio magnam? Cum?
                         </p>
                         {/* for mobile end */}
 
                         {/* for desktop start*/}
-                        <p className="block font-normal text-base text-gray-600 tracking-wide mb-2 lg:max-w-2xl lg:mb-3 lg:text-1xl max-sm:hidden">
+                        <p className="font-sans block font-normal text-base text-gray-600 tracking-wide mb-2 lg:max-w-2xl lg:mb-3 lg:text-1xl max-sm:hidden">
                             2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur eligendi totam unde voluptatem,
                             officia quas? Eveniet tenetur libero officiis, corrupti neque ex nostrum id, voluptates, dolorum sunt odio magnam? Cum?
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto suscipit officia molestias laborum optio quisquam, 
@@ -24,7 +24,7 @@ export default function HeroComponent() {
                         </p>
                         {/* for desktop end*/}
                     </div>
-                    <div className="hidden lg:flex lg:w-1/2">
+                    <div className="font-sans hidden lg:flex lg:w-1/2">
                         <h1 className="">ini gambar</h1>
                     </div>
                 </div>
@@ -33,14 +33,13 @@ export default function HeroComponent() {
             {/* Introduction Self End */}
 
             {/* Button Download Resume Start */}
-            <div className="mt-15 lg:mt-25">
+            <div className="font-sans mt-15 lg:mt-25">
                 <div className="px-2 text-center lg:text-left">
                     <div className="container">
                         <a target="_blank" href="#" className="shadow-md bg-linear-to-r from-[#00B4DB] to-[#5B86E5] text-white font-bold py-3 px-4 rounded">Download Resume </a>
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }   
