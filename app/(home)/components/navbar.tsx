@@ -99,6 +99,7 @@ export default function NavbarComponent() {
                 </div>
                 {/* Item Navbar End */}
             </div>
+
             {/* List Menu Mobile Start */}
             <div
                 className="sm:hidden grid transition-[grid-template-rows] w-full duration-300 ease-out "
@@ -117,6 +118,7 @@ export default function NavbarComponent() {
                                 >{dataMenu.label}</a>
                             ))
                         }
+                        <ThemeSwitcher />
                     </div>
                 </div>
 
