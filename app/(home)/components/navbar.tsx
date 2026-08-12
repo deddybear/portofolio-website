@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from "react";
+import { ThemeSwitcher } from "./theme-switcher";
 
 export default function NavbarComponent() {
 
@@ -28,6 +29,7 @@ export default function NavbarComponent() {
     ];
 
     const [isMenuMobileOpen, setIsMenuMobileOpen] = useState(false);
+
 
     return (
         <nav className="relative after:pointer-events-none after:absolute">
@@ -91,6 +93,8 @@ export default function NavbarComponent() {
                                 <a key={index} href={dataMenu.href} className="px-3 py-2 text-sm font-medium hover:bg-linear-to-r hover:bg-clip-text hover:text-transparent hover:from-[#00B4DB] hover:to-[#5B86E5]">{dataMenu.label}</a>
                             ))
                         }
+                        {/* Dark Mode */}
+                        <ThemeSwitcher />
                     </div>
                 </div>
                 {/* Item Navbar End */}

@@ -21,6 +21,7 @@ export default function FloatingButton() {
 
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+    
     return (
         <div id="floating-button" className="group fixed bottom-6 right-6 z-50 flex items-center
                               opacity-0 translate-y-3 pointer-events-none

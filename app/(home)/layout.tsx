@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "../globals/styles/globals.css";
+import { ThemeProvider } from "./provider/theme";
 
 
 
@@ -37,13 +38,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <html
             lang="en"
             className={`${PlusJakartaSansFont.variable} ${JetBrainsMonoFont.variable} h-full antialiased scroll-smooth`}
+            suppressHydrationWarning
         >
             <head>
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </head>
             <body id="home">
-                {children}
+                <ThemeProvider>
+                    {children}
+                </ThemeProvider>
             </body>
 
         </html>

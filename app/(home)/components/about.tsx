@@ -1,5 +1,3 @@
-
-
 export default function AboutComponent({yearCount, completedProjectCount, techDomainCount} : PropsAboutComponent) {
 
     return (
