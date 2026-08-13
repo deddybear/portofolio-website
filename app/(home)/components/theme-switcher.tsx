@@ -1,9 +1,45 @@
 "use client";
 
+import { useSyncExternalStore } from "react";
 import { useTheme } from "next-themes";
+
+// Subscribe no-op: status "sudah mount" tidak pernah berubah lagi setelah true,
+// jadi tidak perlu benar-benar subscribe ke apa pun.
+const emptySubscribe = () => () => { };
+
+/**
+ * Hook untuk tahu apakah component sudah mount di client.
+ * Dipakai untuk menunda pembacaan `theme` sampai client-side,
+ * tanpa memicu warning "setState sinkron di dalam useEffect".
+ *
+ * - getServerSnapshot() -> selalu false saat SSR
+ * - getSnapshot() -> true begitu React commit di client
+ */
+function useMounted() {
+    return useSyncExternalStore(
+        emptySubscribe,
+        () => true,   // snapshot di client
+        () => false   // snapshot di server
+    );
+}
+
 
 export function ThemeSwitcher() {
     const { theme, setTheme } = useTheme();
+    const mounted = useMounted();
+
+
+    // Selama belum mounted, render placeholder netral (ukuran sama persis)
+    // supaya HTML dari server == HTML pertama di client. Tidak ada mismatch.
+    if (!mounted) {
+        return (
+            <div
+                className="h-10 w-10 rounded-full bg-gray-100 dark:bg-gray-800"
+                aria-hidden="true"
+            />
+        );
+    }
+
 
 
     const isDark = theme === "dark";

@@ -18,12 +18,10 @@ export default function AboutComponent({yearCount, completedProjectCount, techDo
             {/* deskripsi section end */}
 
             {/* Card Experience Start */}
-            <div className="grid grid-cols-1 gap-10 items-start lg:grid-cols-12 lg:gap-14">
+            <div className="grid grid-cols-1 gap-10 items-start lg:grid-cols-12 lg:gap-14 ">
                 
-                <div className="lg:col-span-5 shadow-2xl rounded-2xl">
-                    <div className="relative mt-10 rounded-2xl bg-linear-to-br from-[#00B4DB] to-[#5B86E5] text-white p-6 overflow-hidden lg:mt-0">
-                        <div className="absolute inset-0 opacity-[0.15]">
-                        </div>
+                <div className="lg:col-span-5 mt-10 shadow-2xl rounded-2xl bg-linear-to-br from-[#00B4DB] to-[#5B86E5]">
+                    <div className="relative rounded-2xl text-white p-6 overflow-hidden lg:mt-0">
                         <div className="relative flex flex-col gap-5">
                             <div className="flex items-baseline gap-2">
                                 <span className="font-display font-bold text-4xl">{yearCount}</span>

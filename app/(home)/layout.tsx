@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "../globals/styles/globals.css";
-import { ThemeProvider } from "./provider/theme";
+import { ThemeProvider } from "./provider/theme-provider";
 
 
 
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
     return (
         <html
-            lang="en"
+            lang="id"
             className={`${PlusJakartaSansFont.variable} ${JetBrainsMonoFont.variable} h-full antialiased scroll-smooth`}
             suppressHydrationWarning
         >

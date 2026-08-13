@@ -33,7 +33,7 @@ export default function HeroComponent() {
             {/* Introduction Self End */}
 
             {/* Button Download Resume Start */}
-            <div className="font-sans mt-15 lg:mt-25">
+            <div className="font-sans mt-15 mb-5 lg:mt-25">
                 <div className="px-2 text-center lg:text-left">
                     <div className="container">
                         <a target="_blank" href="#" className="shadow-md bg-linear-to-r from-[#00B4DB] to-[#5B86E5] text-white font-bold py-3 px-4 rounded">Download Resume </a>
