@@ -39,15 +39,14 @@ export default function NavbarComponent() {
                 {/* Logo Webiste Start */}
                 <div className="sm:items-stretch sm:justify-start px-2">
                     <a href="#" className="flex flex-row items-center gap-3 py-6 font-bold">
-                        <span className="relative flex shrink-0 w-10 h-10 rounded-xl bg-accent-gradient  items-center justify-center overflow-hidden">
+                        <span className="relative flex shrink-0 w-10 h-10 rounded-xl bg-accent-gradient items-center justify-center overflow-hidden">
                             <svg width="26" height="26" viewBox="0 0 64 64">
                                 <text x="32" y="40" textAnchor="middle" fontFamily="'JetBrains Mono', monospace"
                                     fontWeight="700" fontSize="19" fill="#FFFFFF" letterSpacing="-0.5">&lt;D/&gt;</text>
                             </svg>
-
                         </span>
                         <div className="hidden sm:flex flex-col leading-tight">
-                            <span className="font-sans font-bold text-sm">Dedi <span className="bg-linear-to-r bg-clip-text text-transparent from-[#00B4DB] to-[#5B86E5]">Suharman</span></span>
+                            <span className="font-sans font-bold text-sm">Dedi <span className="bg-linear-to-r bg-clip-text text-transparent from-[#00B4DB] to-[#5B86E5] dark:bg-linear-to-r dark:from-[#22D3EE] dark:to-[#818CF8]">Suharman</span></span>
                             <span className="font-mono text-[10px] text-muted tracking-wide">FULLSTACK DEVELOPER</span>
                         </div>
                     </a>
@@ -60,7 +59,7 @@ export default function NavbarComponent() {
                         aria-label={isMenuMobileOpen ? 'Tutup menu' : 'Buka menu'}
                         aria-expanded={isMenuMobileOpen}
                         onClick={() => setIsMenuMobileOpen((prev) => !prev)}
-                        className="relative inline-flex items-center justify-center w-10 h-10 rounded-xl border border-line transition-colors duration-300">
+                        className="relative inline-flex items-center justify-center w-10 h-10 rounded-xl border border-line transition-colors duration-300  dark:bg-linear-to-r dark:from-[#22D3EE] dark:to-[#818CF8]">
                         <svg width="20" height="20" viewBox="0 0 20 20">
                             <line
                                 x1="3" y1="6" x2="17" y2="6"
@@ -90,7 +89,7 @@ export default function NavbarComponent() {
                     <div className="flex space-x-4">
                         {
                             listMenu.map((dataMenu, index) => (
-                                <a key={index} href={dataMenu.href} className="px-3 py-2 text-sm font-medium hover:bg-linear-to-r hover:bg-clip-text hover:text-transparent hover:from-[#00B4DB] hover:to-[#5B86E5]">{dataMenu.label}</a>
+                                <a key={index} href={dataMenu.href} className="px-3 py-2 text-sm font-medium hover:bg-linear-to-r hover:bg-clip-text hover:text-transparent hover:from-[#00B4DB] hover:to-[#5B86E5] dark:hover:from-[#22D3EE] dark:hover:to-[#818CF8]">{dataMenu.label}</a>
                             ))
                         }
                         {/* Dark Mode */}

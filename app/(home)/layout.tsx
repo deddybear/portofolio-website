@@ -44,7 +44,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </head>
-            <body id="home">
+            <body id="home" className="transition-colors duration-300">
                 <ThemeProvider>
                     {children}
                 </ThemeProvider>

@@ -254,7 +254,7 @@ export default function TechnologyComponent() {
             {/* tittle section end */}
 
             {/* deskripsi section start */}
-            <p className="text-justify text-gray-600 mt-10 tracking-wide lg:w-5xl lg:mt-15">
+            <p className="text-justify text-gray-600 mt-10 tracking-wide lg:w-5xl lg:mt-15 dark:text-gray-400">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Pariatur est animi ab vel neque necessitatibus. At libero accusantium nobis consectetur ?
                 Ad praesentium cumque deleniti magni ullam corporis, eos facilis fuga?
@@ -267,7 +267,7 @@ export default function TechnologyComponent() {
                     const isOpen = openIndex === index;
 
                     return (
-                        <div key={index} className="mt-10 space-y-10">
+                        <div key={index} className="mt-10 space-y-10 ">
                             {/* ini diganti button */}
 
                             {/* <div className="flex items-center gap-3 mb-4">
@@ -282,7 +282,7 @@ export default function TechnologyComponent() {
                                 type="button"
                                 onClick={() => handleOpenAccordion(index)}
                                 aria-expanded={isOpen}
-                                className="flex items-center gap-3 mb-4"
+                                className="flex items-center gap-3 mb-5 lg:w-full dark:rounded-2xl dark:shadow-lg dark:border dark:border-[#2A2A2A]"
                             >
                                 <span className="font-mono text-xs tracking-wide text-navy bg-indigo-soft px-2.5 py-1 rounded-full">
                                     {String(index + 1).padStart(2, '0')}
@@ -290,15 +290,15 @@ export default function TechnologyComponent() {
                                 <span className="font-display font-semibold text-base">
                                     {data.name}
                                 </span>
-                                <span className="flex-1 border-t border-dashed border-line"></span>
-                                <span className="font-mono text-[11px] text-muted mr-1">
+                                <span className="flex-1 border-t border-dashed border-gray-100"></span>
+                                <span className="font-mono text-[11px] text-muted mr-1 dark:text-white">
                                     {data.technology.length} tools
                                 </span>
                                 <svg
                                     width="18"
                                     height="18"
                                     viewBox="0 0 20 20"
-                                    className="flex transition-transform duration-300"
+                                    className="flex transition-transform duration-300 "
                                     style={{ transform: isOpen ? 'rotate(180deg)' : 'none' }}
                                 >
                                     <path
@@ -319,7 +319,7 @@ export default function TechnologyComponent() {
                                             data.technology.map((data, indexNested) => (
                                                 <div key={indexNested}
                                                     className="group flex items-center gap-3 bg-white border border-line rounded-xl px-4 py-3.5 mb-2
-                                                           transition-all duration-300 hover:-translate-y-1 hover:border-indigo hover:shadow-[0_12px_28px_-16px_rgb(20_28_58/0.35)]"
+                                                           transition-all duration-300 hover:-translate-y-1 hover:border-indigo hover:shadow-[0_12px_28px_-16px_rgb(20_28_58/0.35)] dark:bg-[#1A1A1A]"
                                                 >
                                                     <span className="shrink-0 w-9 h-9 rounded-lg  flex items-center justify-center font-display font-bold text-xs">
                                                         {data.icon}

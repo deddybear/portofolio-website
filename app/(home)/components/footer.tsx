@@ -2,7 +2,7 @@ export default function FooterComponent({ email, location, year, numberWhatsapp,
 
     return (
         <div>
-            <footer className="relative overflow-hidden bg-linear-to-r from-[#00B4DB] to-indigo text-white">
+            <footer className="relative overflow-hidden bg-linear-to-r from-[#00B4DB] to-indigo text-white dark:bg-linear-to-r dark:from-[#22D3EE] dark:to-[#818CF8]">
                 <div className="absolute inset-0 opacity-[0.08] bg-stripe-overlay"></div>
 
                 <div className="relative max-w-5xl mx-auto px-6 pt-16 pb-8">

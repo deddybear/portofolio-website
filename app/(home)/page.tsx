@@ -56,7 +56,7 @@ export default function Home() {
         <div>
 
             {/* Header Section Start */}
-            <header id="navbar" className="bg-white">
+            <header id="navbar" className="bg-white dark:bg-[#121212]">
                 {/* Navbar Section */}
                 <NavbarComponent />
             </header>
@@ -64,30 +64,30 @@ export default function Home() {
 
             <main>
                 {/* Hero Section Start */}
-                <section id="hero" className="px-15 py-10 bg-gray-100 lg:py-25">
+                <section id="hero" className="px-15 py-10 bg-gray-100 lg:py-25 dark:bg-[#121212]">
                     <HeroComponent />
                 </section>
                 {/* Hero Section End */}
 
                 {/* About Section Start */}
-                <section id="about" className="px-15 py-15 lg:py-25">
+                <section id="about" className="px-15 py-15 lg:py-25 dark:bg-[#121212]">
                     <AboutComponent yearCount={gapYearExperience()} completedProjectCount={projectFinish()} techDomainCount={techDomain()} />
                 </section>
                 {/* About Section End */}
 
                 {/* Portofolio Section Start */}
-                <section id="portfolio" className="px-15 py-15 lg:py-25">
+                <section id="portfolio" className="px-15 py-15 lg:py-25 dark:bg-[#121212]">
                     <PortfolioComponent />
                 </section>
                 {/* Portofolio Section Start */}
 
                 {/* Technology Section Start */}
-                <section id="technology" className="px-15 py-15 lg:py-25">
+                <section id="technology" className="px-15 py-15 lg:py-25 dark:bg-[#121212]">
                     <TechnologyComponent />
                 </section>
                 {/* Technology Section End */}
 
-                <section id="contact" className="px-15 mb-15">
+                <section id="contact" className="px-15 pb-15 pt-10 dark:bg-[#121212]">
                     <ContactComponent
                         email="dedi.suharman05@gmail.com" numberWhatsapp="6287859267656"
                         numberWaFormated={formatPhoneID("6287859267656")} location="Sidoarjo, Indonesia" />

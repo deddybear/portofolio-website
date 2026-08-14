@@ -39,7 +39,7 @@ export default function FloatingButton() {
             <a href="#home"
                 className="relative w-14 h-14 rounded-full bg-accent-gradient text-white
               shadow-lg shadow-indigo/30 flex items-center justify-center
-              transition-transform duration-300 hover:scale-110">
+              transition-transform duration-300 hover:scale-110 dark:dark:bg-linear-to-r dark:from-[#22D3EE] dark:to-[#818CF8]">
 
                 {/* Ring ping di belakang */}
                 <span className="fab-ping absolute inset-0 rounded-full bg-accent-gradient"></span>
