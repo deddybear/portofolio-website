@@ -14,7 +14,7 @@ export default function FooterComponent({ email, location, year, numberWhatsapp,
                             <span className="font-display font-bold text-lg tracking-tight">
                                 Dedi Suharman
                             </span>
-                            <p className="text-white/60 text-sm leading-relaxed mt-3 max-w-xs">
+                            <p className="text-white text-sm font-semibold leading-relaxed mt-3 max-w-xs">
                                 Full-stack developer — membangun sistem dari ujung ke ujung, backend,
                                 frontend, sampai infrastruktur yang menopangnya.
                             </p>
@@ -40,24 +40,24 @@ export default function FooterComponent({ email, location, year, numberWhatsapp,
 
                         {/* Navigasi */}
                         <div className="col-span-1 sm:col-span-3">
-                            <span className="font-mono text-[11px] uppercase tracking-wide text-white/40 block mb-4">
+                            <span className="font-mono text-[11px] uppercase tracking-wide text-white/80 font-semibold block mb-4">
                                 Navigasi
                             </span>
-                            <ul className="flex flex-col gap-2.5 text-sm text-white/70">
+                            <ul className="flex flex-col gap-2.5 text-base text-white font-body">
                                 <li><a href="#home" className="transition-colors hover:text-white">Home</a></li>
                                 <li><a href="#about" className="transition-colors hover:text-white">About</a></li>
                                 <li><a href="#portfolio" className="transition-colors hover:text-white">Portfolio</a></li>
-                                <li><a href="#stack" className="transition-colors hover:text-white">Stack</a></li>
+                                <li><a href="#stack" className="transition-colors hover:text-white">Technology</a></li>
                                 <li><a href="#contact" className="transition-colors hover:text-white">Contact</a></li>
                             </ul>
                         </div>
 
                         {/* Kontak */}
                         <div className="col-span-1 sm:col-span-4">
-                            <span className="font-mono text-[11px] uppercase tracking-wide text-white/40 block mb-4">
+                            <span className="font-mono text-[11px] uppercase tracking-wide text-white/80 block mb-4">
                                 Kontak
                             </span>
-                            <ul className="flex flex-col gap-2.5 text-sm text-white/70">
+                            <ul className="flex flex-col gap-2.5 text-white font-base">
                                 <li>
                                     <a href={`mailto:${email}`} className="transition-colors hover:text-white">
                                         {email}
@@ -68,7 +68,7 @@ export default function FooterComponent({ email, location, year, numberWhatsapp,
                                         {numberWaFormated}
                                     </a>
                                 </li>
-                                <li className="text-white/50">{location}</li>
+                                <li>{location}</li>
                             </ul>
                         </div>
 
@@ -76,10 +76,10 @@ export default function FooterComponent({ email, location, year, numberWhatsapp,
 
                     {/* Bottom bar */}
                     <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6">
-                        <span className="font-mono text-[11px] text-white/40">
+                        <span className="font-mono text-[11px] text-white/60">
                             {`© ${year} Dedi Suharman. Seluruh hak cipta dilindungi.`}
                         </span>
-                        <div className="flex items-center gap-5 font-mono text-[11px] text-white/40">
+                        <div className="flex items-center gap-5 font-mono text-[11px] text-white/70">
                             <a href="#" className="transition-colors hover:text-white">Kebijakan Privasi</a>
                             <a href="#" className="transition-colors hover:text-white">Syarat & Ketentuan</a>
                         </div>

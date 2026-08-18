@@ -278,6 +278,7 @@ export default function TechnologyComponent() {
                                 <span className="flex-1 border-t border-dashed border-line"></span>
                             </div> */}
 
+                            {/* Ini adalah Button untuk pembuka stack start  */}
                             <button
                                 type="button"
                                 onClick={() => handleOpenAccordion(index)}
@@ -311,7 +312,9 @@ export default function TechnologyComponent() {
                                     />
                                 </svg>
                             </button>
+                            {/* Ini adalah Button untuk pembuka stack end  */}
 
+                            {/* Ini adalah list item start */}
                             <div className="grid transition-[grid-template-rows] duration-300 ease-out" style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}>
                                 <div className="overflow-hidden">
                                     <div className="grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -319,7 +322,8 @@ export default function TechnologyComponent() {
                                             data.technology.map((data, indexNested) => (
                                                 <div key={indexNested}
                                                     className="group flex items-center gap-3 bg-white border border-line rounded-xl px-4 py-3.5 mb-2
-                                                           transition-all duration-300 hover:-translate-y-1 hover:border-indigo hover:shadow-[0_12px_28px_-16px_rgb(20_28_58/0.35)] dark:bg-[#1A1A1A]"
+                                                           transition-all duration-300 hover:-translate-y-1 hover:border-indigo hover:shadow-[0_12px_28px_-16px_rgb(20_28_58/0.35)] dark:bg-[#1A1A1A]
+                                                           dark:bg-linear-to-r dark:from-[#282b2b] dark:to-[#3f3f44]"
                                                 >
                                                     <span className="shrink-0 w-9 h-9 rounded-lg  flex items-center justify-center font-display font-bold text-xs">
                                                         {data.icon}
@@ -334,6 +338,7 @@ export default function TechnologyComponent() {
                                     </div>
                                 </div>
                             </div>
+                            {/* Ini adalah list item end */}
                         </div>
                     )
                 })

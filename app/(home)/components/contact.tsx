@@ -32,7 +32,7 @@ export default function ContactComponent({ email, location, numberWhatsapp, numb
 
                 <a href={`mailto:${email}`}
                     className="group flex items-center gap-3.5 bg-white border border-line rounded-xl px-4 py-4
-                transition-all duration-300 hover:-translate-y-1 hover:border-indigo hover:shadow-[0_12px_28px_-16px_rgb(20_28_58/0.35)] shadow-xl dark:bg-[#1A1A1A] dark:border-[#2A2A2A]">
+                transition-all duration-300 hover:-translate-y-1 hover:border-indigo hover:shadow-[0_12px_28px_-16px_rgb(20_28_58/0.35)] shadow-xl dark:bg-[#1A1A1A] dark:border-[#2A2A2A] ">
                     <span className="shrink-0 w-9 h-9 rounded-lg bg-indigo-soft text-indigo flex items-center justify-center dark:bg-[#22d3ee1a] dark:text-[#22D3EE]">
                         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M4 6H20V18H4V6Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" /><path d="M4 7L12 13L20 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
                     </span>
