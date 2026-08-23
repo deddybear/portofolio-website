@@ -20,7 +20,7 @@ export default function FooterComponent({ email, location, year, numberWhatsapp,
                             </p>
 
                             <div className="flex items-center gap-2.5 mt-5">
-                                <a href="https://github.com/deddybear" aria-label="GitHub"
+                                <a href="https://github.com/deddybear?tab=repositories" aria-label="GitHub"
                                     className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center
                       transition-colors duration-300 hover:bg-indigo hover:border-indigo">
                                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25C2 16.78 4.87 20.6 8.84 21.95C9.34 22.04 9.5 21.72 9.5 21.44C9.5 21.19 9.49 20.35 9.49 19.46C7 19.97 6.35 18.85 6.15 18.27C6.04 17.97 5.55 17.03 5.12 16.78C4.77 16.58 4.27 16.07 5.11 16.06C5.9 16.05 6.47 16.81 6.66 17.13C7.56 18.7 9.02 18.25 9.6 17.98C9.69 17.3 9.95 16.84 10.24 16.58C7.98 16.32 5.62 15.42 5.62 11.52C5.62 10.41 6.01 9.49 6.68 8.78C6.58 8.52 6.23 7.47 6.78 6.06C6.78 6.06 7.65 5.78 9.5 7.06C10.28 6.83 11.11 6.72 11.94 6.72C12.77 6.72 13.6 6.83 14.38 7.06C16.23 5.77 17.1 6.06 17.1 6.06C17.65 7.47 17.3 8.52 17.2 8.78C17.87 9.49 18.26 10.4 18.26 11.52C18.26 15.43 15.89 16.32 13.63 16.58C14 16.9 14.32 17.52 14.32 18.48C14.32 19.85 14.31 20.99 14.31 21.44C14.31 21.72 14.47 22.05 14.97 21.95C18.94 20.6 21.81 16.78 21.81 12.25C21.81 6.58 17.33 2 12 2Z" /></svg>
@@ -43,7 +43,7 @@ export default function FooterComponent({ email, location, year, numberWhatsapp,
                             <span className="font-mono text-[11px] uppercase tracking-wide text-white/80 font-semibold block mb-4">
                                 Navigasi
                             </span>
-                            <ul className="flex flex-col gap-2.5 text-base text-white font-body">
+                            <ul className="flex flex-col gap-2.5 text-base text-white font-sans">
                                 <li><a href="#home" className="transition-colors hover:text-white">Home</a></li>
                                 <li><a href="#about" className="transition-colors hover:text-white">About</a></li>
                                 <li><a href="#portfolio" className="transition-colors hover:text-white">Portfolio</a></li>

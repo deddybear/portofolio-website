@@ -50,9 +50,12 @@ export default function PortfolioComponent() {
 
             {/* description section start */}
             <p className="text-center mx-auto text-gray-600 mt-10 tracking-wide lg:w-5xl lg:mt-15 dark:text-gray-400">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab,
-                ex cum natus nisi non recusandae repellat dignissimos doloremque
-                dolorem delectus nemo atque quasi perspiciatis soluta, voluptas, at sapiente voluptatem corrupti!
+                Selamat datang di portfolio saya. Di sini, saya menampilkan rangkaian proyek
+                yang pernah saya kembangkan, mulai dari aplikasi web responsif hingga
+                integrasi API yang kompleks. Setiap proyek mencerminkan kemampuan teknis,
+                kreativitas, dan komitmen saya untuk menghasilkan solusi digital yang
+                andal dan menarik. Jelajahi karya-karya saya untuk melihat bagaimana
+                ide-ide diubah menjadi produk nyata.
             </p>
             {/* description section end */}
 

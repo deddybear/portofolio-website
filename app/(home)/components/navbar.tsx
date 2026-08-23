@@ -59,7 +59,7 @@ export default function NavbarComponent() {
                         aria-label={isMenuMobileOpen ? 'Tutup menu' : 'Buka menu'}
                         aria-expanded={isMenuMobileOpen}
                         onClick={() => setIsMenuMobileOpen((prev) => !prev)}
-                        className="relative inline-flex items-center justify-center w-10 h-10 rounded-xl border border-line transition-colors duration-300  dark:bg-linear-to-r dark:from-[#22D3EE] dark:to-[#818CF8]">
+                        className="relative inline-flex items-center justify-center w-10 h-10 rounded-xl border border-line transition-colors duration-300  dark:bg-linear-to-r dark:from-[#22D3EE] dark:to-[#818CF8] dark:border-0">
                         <svg width="20" height="20" viewBox="0 0 20 20">
                             <line
                                 x1="3" y1="6" x2="17" y2="6"
