@@ -1,3 +1,6 @@
+import { getProjectImages } from "@/app/utils/project-images"
+import ImageSider from "./image-slider"
+
 export default function PortfolioComponent() {
 
     // component ini harus nembak api untuk get data card 
@@ -7,38 +10,72 @@ export default function PortfolioComponent() {
         {
             typeProject: "Web App",
             location: "Indonesia",
-            year: "2022",
-            nameProject: "Test"
+            year: "2020",
+            nameProject: "Electronic Voting System",
+            pathImage: getProjectImages('evoting')
+        },
+        {
+            typeProject: "Web App",
+            location: "Indonesia",
+            year: "2020",
+            nameProject: "School Information System",
+            pathImage: getProjectImages('tamanbelajar')
+        },
+        {
+            typeProject: "Mobile App",
+            location: "Indonesia",
+            year: "2021",
+            nameProject: "Farmer Distribution",
+            pathImage: getProjectImages('farmerdistribution')
         },
         {
             typeProject: "Web App",
             location: "Indonesia",
             year: "2022",
-            nameProject: "Test"
+            nameProject: "Inventory Warehouse",
+            pathImage: getProjectImages('warehouse')
         },
         {
             typeProject: "Web App",
             location: "Indonesia",
             year: "2022",
-            nameProject: "Test"
+            nameProject: "Restaurant POS & Inventory System",
+            pathImage: getProjectImages('poskedai')
         },
         {
             typeProject: "Web App",
             location: "Indonesia",
             year: "2022",
-            nameProject: "Test"
+            nameProject: "Company Profile - Nohara Viscape",
+            pathImage: getProjectImages('nohara')
         },
         {
             typeProject: "Web App",
             location: "Indonesia",
             year: "2022",
-            nameProject: "Test"
+            nameProject: "Company Profile - Almira Travel",
+            pathImage: getProjectImages('almira')
         },
         {
             typeProject: "Web App",
             location: "Indonesia",
-            year: "2022",
-            nameProject: "Test"
+            year: "2023",
+            nameProject: "Erp - Garuda Lintas",
+            pathImage: getProjectImages('garuda')
+        },
+        {
+            typeProject: "Web App",
+            location: "Indonesia",
+            year: "2024",
+            nameProject: "Hospital Management System - Medis",
+            pathImage: getProjectImages('medis')
+        },
+        {
+            typeProject: "Web App",
+            location: "Indonesia",
+            year: "2025",
+            nameProject: "Maps Assistent with Ollama",
+            pathImage: getProjectImages('mapaiassistent')
         }
     ]
 
@@ -64,14 +101,21 @@ export default function PortfolioComponent() {
             <div id="collection-projects" className="mt-15 grid grid-cols-1 gap-4 sm:grid-cols-3 lg:mt-18 lg:gap-8">
                 {
                     dataDummy.map((data, index) => (
-                        <a key={index} href="#" className="group flex flex-col border border-line rounded-2xl shadow-lg overflow-hidden
+                        <a key={index} href="#portfolio" className="group flex flex-col border border-line rounded-2xl shadow-lg overflow-hidden
                           transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_40px_-18px_rgb(20_28_58/0.35)] dark:border-[#2A2A2A] dark:bg-[#1A1A1A]">
-                            <div className="relative aspect-[1/0.82] bg-linear-to-br from-[#00B4DB] to-indigo overflow-hidden dark:bg-linear-to-r dark:from-[#22D3EE] dark:to-[#818CF8]">
-                                <div className="absolute inset-0 opacity-40  bg-[repeating-linear-gradient(115deg,rgb(255_255_255/0.15)_0_2px,transparent_2px_26px)]"></div>
-                                <span className="absolute top-3.5 left-3.5 font-mono text-[11px] tracking-wide text-white bg-black/25 border border-white/35 rounded-full px-2.5 py-1 backdrop-blur-sm dark:bg-black/40">
+                            <div className="relative aspect-[1/0.82] overflow-hidden">
+                                <ImageSider images={data.pathImage} alt={`project-photo-${data.nameProject}`} />
+                                {/* {data.pathImage ? (
+                                    <Image unoptimized width={250} height={250} src={`/images/projects/${data.pathImage}`} alt={`project-photo-${data.pathImage}`} className="w-full h-full object-cover" />
+                                    // <img src={data.pathImage} alt={data.nameProject} className="w-full h-full object-cover" />
+                                ) : (
+                                    <div className="absolute inset-0 bg-linear-to-br from-[#00B4DB] to-indigo dark:bg-linear-to-r dark:from-[#22D3EE] dark:to-[#818CF8]"></div>
+                                )} */}
+                                <div className="absolute inset-0 opacity-40 pointer-events-none bg-[repeating-linear-gradient(115deg,rgb(255_255_255/0.15)_0_2px,transparent_2px_26px)]"></div>
+                                <span className="absolute top-3.5 left-3.5 pointer-events-none font-mono text-[11px] tracking-wide text-white bg-black/25 border border-white/35 rounded-full px-2.5 py-1 backdrop-blur-sm dark:bg-black/40">
                                     {data.typeProject}
                                 </span>
-                                <span className="absolute bottom-3.5 right-4 font-mono font-bold text-[13px] text-white/75">
+                                <span className="absolute bottom-3.5 right-4 pointer-events-none font-mono font-bold text-[13px] text-white/75">
                                     {`0${index + 1}`}
                                 </span>
                             </div>
@@ -94,7 +138,7 @@ export default function PortfolioComponent() {
                                 </div>
                             </div>
                         </a>
-                ))}
+                    ))}
             </div>
             {/* list card projects end */}
         </div>

@@ -3,4 +3,5 @@ interface CardPortfolio {
     nameProject: string;
     year: string;
     location: string;
+    pathImage?: string | string[]
 }

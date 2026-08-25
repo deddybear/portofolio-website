@@ -293,22 +293,25 @@ export default function TechnologyComponent() {
                                 <span className="font-mono text-[11px] text-muted mr-1 dark:text-white">
                                     {data.technology.length} tools
                                 </span>
-                                <svg
-                                    width="18"
-                                    height="18"
-                                    viewBox="0 0 20 20"
-                                    className="flex transition-transform duration-300 "
-                                    style={{ transform: isOpen ? 'rotate(180deg)' : 'none' }}
-                                >
-                                    <path
-                                        d="M5 7.5L10 12.5L15 7.5"
-                                        stroke="#141C3A"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        fill="none"
-                                    />
-                                </svg>
+                                <span className="dark:text-white">
+                                    <svg
+                                        width="18"
+                                        height="18"
+                                        viewBox="0 0 20 20"
+                                        className="flex transition-transform duration-30"
+                                        style={{ transform: isOpen ? 'rotate(180deg)' : 'none' }}
+                                    >
+                                        <path
+                                            d="M5 7.5L10 12.5L15 7.5"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            fill="none"
+                                        />
+                                    </svg>
+                                </span>
+
                             </button>
                             {/* Ini adalah Button untuk pembuka stack end  */}
 
