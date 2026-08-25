@@ -12,13 +12,13 @@ export default function HeroComponent() {
                         <h1 className="font-sans font-bold text-2xl tracking-wide mb-8 lg:mb-17 lg:text-5xl sm:tracking-wider bg-linear-to-r bg-clip-text text-transparent from-[#00B4DB] to-[#5B86E5] dark:bg-linear-to-r dark:from-[#22D3EE] dark:to-[#818CF8">Fullstack Developer</h1>
                         {/* for mobile start */}
                         <p className="font-sans block font-normal text-base text-gray-600 tracking-wide mb-2 lg:max-w-2xl lg:mb-3 lg:text-1xl sm:hidden dark:text-gray-400">
-                            Saya seorang Fullstack Developer yang bersemangat mengembangkan solusi web yang responsif dan skalabel, saya menciptakan pengalaman pengguna yang optimal.
+                            Saya seorang Fullstack Developer yang bersemangat mengembangkan aplikasi berbasis web maupun mobile secara responsif dan skalabel, serta menciptakan pengalaman pengguna yang optimal.
                         </p>
                         {/* for mobile end */}
 
                         {/* for desktop start*/}
                         <p className="font-sans block font-normal text-base text-gray-600 tracking-wide mb-2 lg:max-w-2xl lg:mb-3 lg:text-1xl max-sm:hidden dark:text-gray-400">
-                            Saya seorang Fullstack Developer yang bersemangat mengembangkan solusi web yang responsif dan skalabel, saya menciptakan pengalaman pengguna yang optimal. Saya selalu mengikuti tren terbaru dalam pengembangan web dan memastikan kode yang saya tulis bersih, efisien, dan mudah dipelihara.
+                            Saya seorang Fullstack Developer yang bersemangat mengembangkan aplikasi berbasis web maupun mobile yang responsif dan skalabel, serta menciptakan pengalaman pengguna yang optimal. Saya selalu mengikuti tren terbaru dalam pengembangan web dan memastikan kode yang saya tulis bersih, efisien, dan mudah dipelihara.
                         </p>
                         {/* for desktop end*/}
                     </div>

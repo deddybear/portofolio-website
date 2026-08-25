@@ -12,8 +12,8 @@ export default function ContactComponent({ email, location, numberWhatsapp, numb
                         Ada proyek yang ingin didiskusikan?
                     </h2>
                     <p className="text-white/70 text-[15px] leading-relaxed max-w-md mb-9">
-                        Ceritakan kebutuhan anda — sistem baru, migrasi, atau infrastruktur yang
-                        perlu dirapikan. Biasanya kami balas dalam 1x24 jam.
+                        Ceritakan kebutuhan Anda — sistem baru, migrasi, atau infrastruktur yang
+                        perlu dirapikan.
                     </p>
 
                     <a href={`mailto:${email}`}

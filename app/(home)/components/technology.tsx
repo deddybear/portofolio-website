@@ -255,7 +255,7 @@ export default function TechnologyComponent() {
 
             {/* deskripsi section start */}
             <p className="text-justify text-gray-600 mt-10 tracking-wide lg:w-5xl lg:mt-15 dark:text-gray-400">
-                Berikut adalah teknologi stack yang saya gunakan untuk mengembangkan aplikasi.
+                Berikut adalah teknologi yang saya kuasai untuk mengembangkan aplikasi.
             </p>
             {/* deskripsi section end */}
 

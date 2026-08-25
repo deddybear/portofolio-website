@@ -73,7 +73,7 @@ export default function PortfolioComponent() {
         {
             typeProject: "Web App",
             location: "Indonesia",
-            year: "2025",
+            year: "2026",
             nameProject: "Maps Assistent with Ollama",
             pathImage: getProjectImages('mapaiassistent')
         }
@@ -87,12 +87,7 @@ export default function PortfolioComponent() {
 
             {/* description section start */}
             <p className="text-center mx-auto text-gray-600 mt-10 tracking-wide lg:w-5xl lg:mt-15 dark:text-gray-400">
-                Selamat datang di portfolio saya. Di sini, saya menampilkan rangkaian proyek
-                yang pernah saya kembangkan, mulai dari aplikasi web responsif hingga
-                integrasi API yang kompleks. Setiap proyek mencerminkan kemampuan teknis,
-                kreativitas, dan komitmen saya untuk menghasilkan solusi digital yang
-                andal dan menarik. Jelajahi karya-karya saya untuk melihat bagaimana
-                ide-ide diubah menjadi produk nyata.
+                Halaman ini menampilkan sejumlah proyek yang telah saya rancang dan kembangkan, mulai dari aplikasi web maupun mobile hingga sistem dengan integrasi API yang kompleks. Setiap proyek merupakan cerminan kemampuan teknis, kreativitas, serta dedikasi saya dalam menghadirkan solusi digital yang andal dan berorientasi pada hasil.
             </p>
             {/* description section end */}
 
@@ -132,7 +127,7 @@ export default function PortfolioComponent() {
                                     </span>
                                 </div>
                                 <div className="flex flex-wrap items-center gap-1.5 font-mono text-xs text-muted mt-auto pt-2 border-t border-dashed border-line">
-                                    <span className="text-indigo dark:text-[#818CF8]">Web Apps</span><span className="text-line">·</span>
+                                    <span className="text-indigo dark:text-[#818CF8]">{data.typeProject}</span><span className="text-line">·</span>
                                     <span>{data.year}</span><span className="text-line">·</span>
                                     <span>{data.location}</span>
                                 </div>

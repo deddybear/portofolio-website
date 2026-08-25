@@ -10,11 +10,10 @@ export default function AboutComponent({ yearCount, completedProjectCount, techD
 
 
             {/* deskripsi section start */}
-            <p className="text-justify text-gray-600 mt-10 tracking-wide lg:w-xl lg:mt-15 lg:mb-15 dark:text-gray-400">
-                Saya seorang pengembang full-stack yang membangun aplikasi web yang responsif dan skalabel,
-                mulai dari antarmuka pengguna hingga logika server. Fokus saya adalah menciptakan pengalaman
-                pengguna yang intuitif dan solusi yang andal, sambil terus belajar dan beradaptasi dengan
-                teknologi terbaru di bidang pengembangan perangkat lunak.
+            <p className="text-justify hyphens-auto text-gray-600 mt-10 lg:w-xl lg:mt-15 lg:mb-15 dark:text-gray-400">
+                Saya seorang Fullstack Developer yang terfokus pada perancangan dan pengembangan aplikasi web maupun mobile secara responsif, skalabel, dan andal, dari antarmuka pengguna hingga arsitektur server. 
+                Berkomitmen menghadirkan pengalaman pengguna yang intuitif melalui solusi teknis 
+                secara solid, serta senantiasa mengikuti perkembangan teknologi terbaru dalam Software Development.
             </p>
             {/* deskripsi section end */}
 
@@ -26,18 +25,18 @@ export default function AboutComponent({ yearCount, completedProjectCount, techD
                         <div className="relative flex flex-col gap-5">
                             <div className="flex items-baseline gap-2">
                                 <span className="font-display font-bold text-4xl">{yearCount}</span>
-                                <span className="font-sans text-xs text-white/60 leading-snug">
+                                <span className="font-sans text-xs text-white/90 leading-snug">
                                     Years Experience
                                 </span>
                             </div>
                             <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/15">
                                 <div>
                                     <span className="font-display font-bold text-2xl block">{completedProjectCount}+</span>
-                                    <span className="font-sans text-[11px] text-white/60">Project Completed</span>
+                                    <span className="font-sans text-[11px] text-white/90">Project Completed</span>
                                 </div>
                                 <div>
                                     <span className="font-display font-bold text-2xl block">{techDomainCount}+</span>
-                                    <span className="font-sans text-[11px] text-white/60">Technology domain</span>
+                                    <span className="font-sans text-[11px] text-white/90">Technology domain</span>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +57,7 @@ export default function AboutComponent({ yearCount, completedProjectCount, techD
                             </span>
                             <span className="font-display font-semibold text-sm">Full-stack Development</span>
                             <span className="text-muted text-[13px] leading-relaxed">
-                                Membangun aplikasi web end-to-end dengan teknologi modern seperti Rust, PHP, Golang,
+                                Membangun aplikasi end-to-end dengan teknologi modern seperti Rust, PHP, Golang,
                                 Node.js, React.JS Next.JS dan Flutter. Berpengalaman dalam merancang arsitektur sistem yang
                                 scalable dan maintainable, dari prototipe hingga produksi.
                             </span>

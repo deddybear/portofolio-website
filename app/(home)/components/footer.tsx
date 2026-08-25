@@ -15,8 +15,8 @@ export default function FooterComponent({ email, location, year, numberWhatsapp,
                                 Dedi Suharman
                             </span>
                             <p className="text-white text-sm font-semibold leading-relaxed mt-3 max-w-xs">
-                                Full-stack developer — membangun sistem dari ujung ke ujung, backend,
-                                frontend, sampai infrastruktur yang menopangnya.
+                                Fullstack developer — membangun sistem dari ujung ke ujung, frontend,
+                                backend, sampai dengan infrastruktur server.
                             </p>
 
                             <div className="flex items-center gap-2.5 mt-5">
